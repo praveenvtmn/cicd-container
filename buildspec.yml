@@ -6,8 +6,8 @@ phases:
       - $(aws ecr get-login --no-include-email --region us-east-1)
   build:
     commands:
-      - docker build -t youtube:latest .
-      - docker tag youtube:latest 919821368124.dkr.ecr.us-east-1.amazonaws.com/pthomas-fargate:latest
+      - docker build -t pthomas-fargate:latest .
+      - docker tag pthomas-fargate:latest 919821368124.dkr.ecr.us-east-1.amazonaws.com/pthomas-fargate:latest
   post_build:
     commands:
       - docker push 919821368124.dkr.ecr.us-east-1.amazonaws.com/pthomas-fargate:latest
