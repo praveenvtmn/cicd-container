@@ -11,7 +11,7 @@ phases:
   post_build:
     commands:
       - docker push 919821368124.dkr.ecr.us-east-1.amazonaws.com/pthomas-fargate:latest
-      - printf '[{"name":helloworld,"imageUri":"%s"}]' 
+      - printf '[{"name":"helloworld","imageUri":"%s"}]' 
        919821368124.dkr.ecr.us-east-1.amazonaws.com/pthomas-fargate:latest > imagedefinitions.json
 artifacts:
   files: imagedefinitions.json
